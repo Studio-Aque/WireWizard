@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9036230580679009797}
   - component: {fileID: 5578433963587062609}
   m_Layer: 0
-  m_Name: LineRendererPoint
+  m_Name: wireOBJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

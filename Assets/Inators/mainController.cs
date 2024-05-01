@@ -4,13 +4,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class mainController : MonoBehaviour
-{    
+{
     void Start()
     {
     }
 
     void Update()
     {
-        
+
     }
 }
