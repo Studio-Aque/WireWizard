@@ -11,10 +11,6 @@ public class mainController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            gameObject.AddComponent<LineRenderer>();
-
-        }
+        
     }
 }
