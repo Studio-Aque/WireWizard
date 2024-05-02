@@ -12,8 +12,6 @@ public class onOBJ : MonoBehaviour
 
     BoxCollider2D collider;
 
-    bool creatingWire = false;
-
     private void Start()
     {
         wireController = GameObject.Find("MainController").GetComponent<wireController>();
@@ -22,24 +20,17 @@ public class onOBJ : MonoBehaviour
 
     private void Update()
     {
-        if (creatingWire)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                currentWire.GetComponent<LineRenderer>().SetPosition(currentWire.GetComponent<LineRenderer>().positionCount + 1, new Vector3(mousePos.x, mousePos.y, 0));
-            }
-        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "cursor")
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.(0))
             {
-                currentWire = Instantiate(wireController.wire, transform.position, Quaternion.identity);
-                creatingWire = true;
+                Instantiate(wireController.wire, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+
+                wireController.isCreatingAWire = true;
             }
         }
     }

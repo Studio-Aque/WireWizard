@@ -6,14 +6,9 @@ public class wireController : MonoBehaviour
 {
     public GameObject wire;
 
-    // Start is called before the first frame update
+    public bool isCreatingAWire = false;
+
     void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
     {
 
     }
