@@ -20,18 +20,20 @@ public class onOBJ : MonoBehaviour
 
     private void Update()
     {
+        if (wireController.isCreatingAWire)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+               Instantiate
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "cursor")
         {
-            if (Input.(0))
-            {
-                Instantiate(wireController.wire, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
-
-                wireController.isCreatingAWire = true;
-            }
+            wireController.isCreatingAWire = true;
         }
     }
 }
